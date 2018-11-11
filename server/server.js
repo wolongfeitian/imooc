@@ -14,7 +14,7 @@ const User = mongoose.model('user',new mongoose.Schema({
     age:{type:Number,require:true}
 }))
 //新增数据
-User.create({
+/*User.create({
     user:'xiaohua',
     age:12
 },function(err, doc){
@@ -23,18 +23,18 @@ User.create({
     }else{
         console.log(err)
     }
-})
+})*/
 
 
 //删除
-User.remove({age:18},function(err,doc){
+/*User.remove({age:18},function(err,doc){
     console.log(doc)
-})
+})*/
 
 //更新
-User.update({'name':'xiaoming'},{'$set':{age:26}},function(err, doc){
+/*User.update({'name':'xiaoming'},{'$set':{age:26}},function(err, doc){
     console.log(doc)
-})
+})*/
 
 const app = express()
 
@@ -43,6 +43,7 @@ app.get('/',function(req,res){
 })
 
 app.get('/data',function(req,res){
+    console.log(22222)
   /*User.find({},function(err, doc){
       return res.json(doc)
   })*/
